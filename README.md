@@ -1,76 +1,83 @@
-# Prompt Studio
+# 🎨 Prompt Studio: Generador de Fichas y Copies con IA
 
-**Prompt Studio** es una aplicación web desarrollada con Streamlit que permite generar descripciones optimizadas para productos de e-commerce, utilizando inteligencia artificial de Google (Gemini / PaLM).
-
-Incluye:
-- Descripción persuasiva adaptada por canal (MercadoLibre, WooCommerce, etc.)
-- Formato estructurado con HTML y SEO
-- Exportación de resultados
-- Notebook de experimentación con prompting
+**Repositorio del Proyecto Final para el curso de IA: Generación de Prompts**
 
 ---
 
-## 🚀 Cómo ejecutarla localmente
+## 🌐 App en producción
 
-1. Clonar este repositorio:
-```bash
-git clone https://github.com/pipjoy/prompt_studio.git
-cd prompt-studio
-```
-
-2. Crear un entorno virtual:
-```bash
-python -m venv venv
-source venv/bin/activate  # en Windows: venv\Scripts\activate
-```
-
-3. Instalar dependencias:
-```bash
-pip install -r requirements.txt
-```
-
-4. Crear el archivo `.env`:
-```
-GOOGLE_API_KEY=AIza-XXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-5. Ejecutar la app:
-```bash
-streamlit run app.py
-```
+👉 [Probar la app online en Streamlit](https://promptstudio-mgapwv7ufdkocw5nprzabf.streamlit.app/)
 
 ---
 
-## 🌐 Despliegue en Streamlit Cloud
+## 📁 Repositorio en GitHub
 
-1. Subí este proyecto a GitHub.
-2. Entrá en [https://streamlit.io/cloud](https://streamlit.io/cloud)
-3. Clic en "New app", elegí tu repo y en `Main file path` escribí: `app.py`
-4. En "Advanced settings" agregá la variable de entorno:
-
-```
-GOOGLE_API_KEY=AIza-XXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-5. Clic en Deploy.
+🔗 [Ver código fuente en GitHub](https://github.com/pipjoy/prompt_studio.git)
 
 ---
 
-## 📁 Estructura del proyecto
+## 🧠 Resumen
+
+Prompt Studio es una aplicación que automatiza la generación de contenido comercial para e-commerce. A partir del nombre de un producto, se genera:
+
+- ✅ Una ficha HTML optimizada para plataformas como WooCommerce o TiendaNube
+- ✅ Copies publicitarios adaptados para Instagram, Twitter, TikTok y Google Ads
+- ✅ Un mensaje comercial corto para WhatsApp o Email
+- ✅ Exportación como archivo CSV
+
+Además, se contempla el uso de una imagen generada por IA como soporte visual (texto→imagen).
+
+---
+
+## 🎯 Objetivo del Proyecto
+
+Reducir el tiempo y esfuerzo requerido para generar descripciones de productos, asegurando una comunicación coherente y optimizada para múltiples canales de venta digital.
+
+---
+
+## 🚀 Tecnologías utilizadas
+
+- `OpenAI` (GPT-4)
+- `Streamlit` para la app web
+- `Python` para lógica de generación
+- `NightCafe` / `Bing` para texto→imagen
+- `CSV` para exportaciones
+
+---
+
+## 🧩 Prompt ejemplo (texto → texto)
 
 ```
-.
-├── app.py
-├── prompts_gemini.py
-├── requirements.txt
-├── .env.example
-├── notebooks/
-│   └── Notebook_Gemini_Producto.ipynb
+Generá una ficha HTML para e-commerce argentino basada en el producto 'iPhone 15 Pro Max 256Gb'. Incluir: título, resumen, botón de compra, tabla técnica, beneficios, FAQs, garantía, metadatos SEO. No incluyas explicación, solo HTML plano.
 ```
 
 ---
 
-## 🧠 Créditos
+## 🎨 Prompt ejemplo (texto → imagen)
 
-- Modelo: [Gemini (gemini-1.5-flash)](https://makersuite.google.com)
-- Plataforma: [Streamlit](https://streamlit.io)
+```
+Generate a professional product photo of a modern smartphone on a clean white background, with shadow and realistic lighting.
+```
+
+*(Imagen generada manualmente y pegada en la notebook o README)*
+
+---
+
+## ✅ Resultados esperados
+
+- Generación inmediata de contenido estructurado y profesional
+- Facilidad de exportación y reutilización en canales comerciales
+- Interfaz accesible vía navegador sin necesidad de instalación local
+
+---
+
+## 📚 Referencias
+
+- OpenAI API
+- NightCafe Studio
+- Google Colab / Streamlit
+- Curso "IA: Generación de Prompts"
+
+---
+
+> Desarrollado por: pipjoy
